@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FORM</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+    <!-- bootstrap 5.0.2 link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/pickadate.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/colors.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/components.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="css/formstyle/style.css">
+    {{>headerlinks}}
+</head>
+
+<body class="vertical-layout vertical-menu-modern dark-layout 2-columns  navbar-floating footer-static"
+    data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="dark-layout">
+    {{>navbar}}
+
+    <!-- Add User Information -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-2">Form</h4>
+                            <form action="/registration" method="post" class="form form-horizontal " id="inputForm">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <!-- First Name -->
+                                        <div class="col-12">
+                                            <div class="form-group row">
+                                                <div class="col-md-2">
+                                                    <span>First Name</span>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="position-relative">
+                                                        <input type="text" id="firstname" name="firstname"
+                                                            class="form-control text-light firstName"
+                                                            placeholder="First Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Last Name -->
+                                        <div class="col-12">
+                                            <div class="form-group row">
+                                                <div class="col-md-2">
+                                                    <span>Last Name</span>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <div class="position-relative ">
+                                                        <input type="text " id="lastname" name="lastname"
+                                                            class="form-control text-light lastName"
+                                                            placeholder="Last Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Mobile no / Email -->
+                                        <div class="col-12">
+                                            <div class="form-group row">
+                                                <div class="col-md-2">
+                                                    <span>Contact</span>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="position-relative">
+                                                        <input type="text" id="emailAddress" name="email"
+                                                            class="form-control text-light emailAddress"
+                                                            data-msg="Please enter a valid email address."
+                                                            placeholder="Email">
+                                                    </div>
+                                                    <span class="emailError text-danger"></span>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="position-relative">
+                                                        <input type="number"
+                                                            class="form-control text-light mobileNumber" id="mobileno"
+                                                            name="phone" placeholder="Mobile No">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Birth Date / Gender -->
+                                        <div class="col-12 ">
+                                            <div class="form-group row ">
+                                                <div class="col-md-2">
+                                                    <span> Age</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="col-md-12 p-0">
+                                                        <div class="position-relative ">
+                                                            <input type="text"
+                                                                class="form-control pickadate-months-year text-light birthDate"
+                                                                id="birthdate" name="age">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 text-center">
+                                                    <span>Gender</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="d-inline-block mr-2">
+                                                            <fieldset>
+                                                                <div class="vs-radio-con">
+                                                                    <input type="radio" name="gender" class="gender"
+                                                                        value="Male" id="male">
+                                                                    <span class="vs-radio radiovalue">
+                                                                        <span class="vs-radio--border"></span>
+                                                                        <span class="vs-radio--circle"></span>
+                                                                    </span>
+                                                                    <span>Male</span>
+                                                                </div>
+                                                            </fieldset>
+                                                        </li>
+                                                        <li class="d-inline-block mr-2">
+                                                            <fieldset>
+                                                                <div class="vs-radio-con">
+                                                                    <input type="radio" name="gender" class="gender"
+                                                                        value="Female" id="female">
+                                                                    <span class="vs-radio radiovalue">
+                                                                        <span class="vs-radio--border"></span>
+                                                                        <span class="vs-radio--circle"></span>
+                                                                    </span>
+                                                                    <span>Female</span>
+                                                                </div>
+                                                            </fieldset>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- password -->
+                                        <div class="col-12 ">
+                                            <div class="form-group row">
+                                                <div class="col-md-2">
+                                                    <span>password</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="col-12 p-0">
+                                                        <input type="password" id="password" name="password"
+                                                            class="form-control text-light password">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <span>Comfirm password</span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="col-12 p-0">
+                                                        <input type="password" id="password" name="confirmpassword"
+                                                            class="form-control text-light password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Button -->
+                                        <div class="col-12">
+                                            <div class="col-md-6 offset-md-3 ">
+                                                <a href="/">
+                                                    <button type="button" id="back"
+                                                        class="btn btn-outline-info mr-1 mb-1 backBtn">Back</button>
+                                                </a>
+                                                <button type="submit" id="saveBtn"
+                                                    class="btn btn-primary mr-1 mb-1 saveBtn">Submit</button>
+                                                <button type="reset"
+                                                    class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
